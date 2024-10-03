@@ -1,9 +1,9 @@
 """Task 2"""
-
+# Импортируем модуль для работы с системой.
 import sys
 
 
-def read_circle_data(file_path):
+def read_circle_data(file_path: str):
     """Чтение данных окружности (координаты центра и радиус) из файла."""
     with open(file_path, 'r') as file:
         x0 = float(file.readline().strip())  # Координата X центра окружности.
@@ -39,7 +39,7 @@ def main():
     if len(sys.argv) != 3:
         print("Usage: python3 task2.py <circle_file.txt> <points_file.txt>")
         return
-
+    # Аргументы из командной строки.
     circle_file = sys.argv[1]
     points_file = sys.argv[2]
     # Считываем данные окружности.

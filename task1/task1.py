@@ -1,7 +1,7 @@
 """Task 1"""
 
 
-def calc_path(len_arr: int, step: int):
+def calc_path(len_arr: int, step: int) -> list:
     """
     Функция для подсчёта кругового массива без его создания.
     :param len_arr: Длина массива.
@@ -30,9 +30,12 @@ def calc_path(len_arr: int, step: int):
 
 
 # Принимаем агрументы из командной строки.
-n, m = [int(i) for i in input().split()]
-# Печатаем результат.
-print(*calc_path(n, m), sep="")
+try:
+    n, m = [i for i in input().split()]
+    # Печатаем результат.
+    print(*calc_path(int(n), int(m)), sep="")
+except ValueError:
+    print("Фрмат ввода предполагает два числа.")
 
 
 """Task 1 version 2"""
